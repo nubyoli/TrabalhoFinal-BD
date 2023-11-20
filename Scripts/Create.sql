@@ -4,7 +4,7 @@ USE PlacasSC;
 
 CREATE TABLE Cliente
 (
-    CPF_Cliente INT NOT NULL AUTO_INCREMENT,
+    CPF_Cliente BIGINT NOT NULL,
     Nome        VARCHAR(255),
     Telefone    VARCHAR(15),
     Endereco    VARCHAR(255),
@@ -15,7 +15,7 @@ CREATE TABLE Funcionario
 (
     ID_Funcionario INT NOT NULL AUTO_INCREMENT,
     Nome           VARCHAR(255),
-    CPF_Cliente    INT NOT NULL,
+    CPF_Cliente    BIGINT NOT NULL,
     PRIMARY KEY (ID_Funcionario),
     FOREIGN KEY (CPF_Cliente) REFERENCES Cliente (CPF_Cliente)
 );
@@ -40,7 +40,7 @@ CREATE TABLE Encomenda
     Data_Encomenda   DATE,
     Status_Encomenda VARCHAR(255),
     ID_Placa         INT NOT NULL,
-    CPF_Cliente      INT NOT NULL,
+    CPF_Cliente      BIGINT NOT NULL,
     ID_Funcionario   INT NOT NULL,
     PRIMARY KEY (ID_Encomenda),
     FOREIGN KEY (CPF_Cliente) REFERENCES Cliente (CPF_Cliente),
