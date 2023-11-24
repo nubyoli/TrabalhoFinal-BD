@@ -13,7 +13,7 @@ CREATE TABLE Cliente
 
 CREATE TABLE Funcionario
 (
-    ID_Funcionario INT NOT NULL AUTO_INCREMENT,
+    ID_Funcionario INT    NOT NULL AUTO_INCREMENT,
     Nome           VARCHAR(255),
     CPF_Cliente    BIGINT NOT NULL,
     PRIMARY KEY (ID_Funcionario),
@@ -36,12 +36,12 @@ CREATE TABLE Placas
 
 CREATE TABLE Encomenda
 (
-    ID_Encomenda     INT NOT NULL AUTO_INCREMENT,
+    ID_Encomenda     INT    NOT NULL AUTO_INCREMENT,
     Data_Encomenda   DATE,
     Status_Encomenda VARCHAR(255),
-    ID_Placa         INT NOT NULL,
+    ID_Placa         INT    NOT NULL,
     CPF_Cliente      BIGINT NOT NULL,
-    ID_Funcionario   INT NOT NULL,
+    ID_Funcionario   INT    NOT NULL,
     PRIMARY KEY (ID_Encomenda),
     FOREIGN KEY (CPF_Cliente) REFERENCES Cliente (CPF_Cliente),
     FOREIGN KEY (ID_Funcionario) REFERENCES Funcionario (ID_Funcionario),
