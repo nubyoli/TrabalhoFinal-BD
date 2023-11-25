@@ -53,7 +53,7 @@ CREATE TABLE Recibo
 (
     ID_Recibo        INT NOT NULL AUTO_INCREMENT,
     ID_Encomenda     INT NOT NULL,
-    Status_Pagamente ENUM ('Pago', 'Pendente'),
+    Status_Pagamento ENUM ('Pago', 'Pendente'),
     PRIMARY KEY (ID_Recibo),
     FOREIGN KEY (ID_Encomenda) REFERENCES Encomenda (ID_Encomenda)
 );
