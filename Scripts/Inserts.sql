@@ -23,12 +23,11 @@ VALUES ('Carlos Oliveira', 12345678901),
        ('Mariana Silva', 34567890123),
        ('Rafaela Costa', 45678901234);
 
-
-INSERT INTO Placas (Altura, Largura, Frase, Cor_Placa, Cor_Frase, Data_Entrega)
+INSERT INTO Placas (Altura, Largura, Frase, Cor_Placa, Cor_Frase, Data_Pedido)
 VALUES (50, 100, 'Bem-vindo', 'Branca', 'Azul', '2023-01-15'),
-       (60, 120, 'Cuidado com o cão', 'Cinza', 'Vermelho', '2023-02-20'),
-       (40, 80, 'Proibido estacionar', 'Branca', 'Amarelo', '2023-03-10'),
-       (70, 140, 'Área restrita', 'Cinza', 'Preto', '2023-04-05'),
+       (60, 120, 'Cuidado com o cão', 'Cinza', 'Vermelho', '2023-01-23'),
+       (40, 80, 'Proibido estacionar', 'Branca', 'Amarelo', '2023-04-12'),
+       (70, 140, 'Área restrita', 'Cinza', 'Preto', '2023-03-05'),
        (55, 110, 'Acesso negado', 'Branca', 'Verde', '2023-05-18'),
        (45, 90, 'Atenção: perigo', 'Cinza', 'Azul', '2023-06-22'),
        (75, 150, 'Não ultrapasse', 'Branca', 'Vermelho', '2023-07-30'),
@@ -58,23 +57,19 @@ VALUES ('2023-01-05', 'Pendente', 1, 12345678901, 1),
        ('2024-02-10', 'Pendente', 14, 56756756756, 2),
        ('2024-03-15', 'Em processo', 15, 67867867867, 3);
 
-
-INSERT INTO Recibo (ID_Encomenda, ID_Placa)
-VALUES (1, 1),
-       (2, 2),
-       (3, 3),
-       (4, 4),
-       (5, 5),
-       (6, 6),
-       (7, 7),
-       (8, 8),
-       (9, 9),
-       (10, 10),
-       (11, 11),
-       (12, 12),
-       (13, 13),
-       (14, 14),
-       (15, 15);
-
-
-
+INSERT INTO Recibo (ID_Recibo, ID_Encomenda, Status_Pagamento)
+VALUES (1, 1, 'Pago'),
+       (2, 2, 'Pago'),
+       (3, 3, 'Pendente'),
+       (4, 4, 'Pago'),
+       (5, 5, 'Pendente'),
+       (6, 6, 'Pago'),
+       (7, 7, 'Pago'),
+       (8, 8, 'Pendente'),
+       (9, 9, 'Pago'),
+       (10, 10, 'Pendente'),
+       (11, 11, 'Pago'),
+       (12, 12, 'Pago'),
+       (13, 13, 'Pendente'),
+       (14, 14, 'Pago'),
+       (15, 15, 'Pendente');
