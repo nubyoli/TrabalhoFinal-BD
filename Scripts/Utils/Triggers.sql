@@ -1,7 +1,7 @@
 USE PLACASSC;
 
 -- Trigger que calcula o valor final e o preco das placas sem precisar inserir algum valor para esses campos no insert
-CREATE TRIGGER calculaValorPlace
+CREATE TRIGGER calculaValorPlaca
     BEFORE INSERT -- Define que antes de inserir qualquer valor na tabela algo deve ser realizado
     ON Placas
     FOR EACH ROW
