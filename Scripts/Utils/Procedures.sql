@@ -13,3 +13,15 @@ BEGIN
              JOIN Funcionario ON Encomenda.ID_Funcionario = Funcionario.ID_Funcionario
     WHERE Status_Encomenda = 'Pendente';
 END;
+
+-- Procedure que retorna os dados do recibo
+CREATE PROCEDURE geraRecibo(IN encomenda_id INT)
+BEGIN
+    SELECT *
+    FROM Encomenda,
+         Recibo,
+         Placas
+    WHERE Encomenda.ID_Encomenda = encomenda_id
+      AND Recibo.ID_Encomenda = Encomenda.ID_Encomenda
+      AND Encomenda.ID_Placa = Placas.ID_Placa;
+END;
